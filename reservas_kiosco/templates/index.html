@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Kioscos</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Reserva de Kioscos</h1>
+    <form action="/reservar" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="rol">Rol:</label>
+        <select id="rol" name="rol" required>
+            <option value="alumno">Alumno</option>
+            <option value="profesor">Profesor</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="invitado">Invitado</option>
+        </select>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="hora_inicio">Hora de inicio:</label>
+        <input type="time" id="hora_inicio" name="hora_inicio" required>
+
+        <label for="hora_fin">Hora de fin:</label>
+        <input type="time" id="hora_fin" name="hora_fin" required>
+
+        <label for="espacio">Espacio:</label>
+        <select id="espacio" name="espacio" required>
+            <option value="Kiosco lineal 1">Kiosco lineal 1</option>
+            <option value="Kiosco lineal 2">Kiosco lineal 2</option>
+        </select>
+
+        <button type="submit">Reservar</button>
+    </form>
+</body>
+</html>
